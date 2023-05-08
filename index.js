@@ -1,4 +1,4 @@
-const posix = require('posix');
+const posix = require('posix.js');
 
 const prio = {
   ALL: 'debug',
@@ -23,7 +23,7 @@ function syslogAppender(layout, timezoneOffset) {
 }
 
 function configure(config, layouts) {
-  posix.openlog(config.tag, { cons: true, ndelay: true, pid: true }, config.facility);
+  posix.openlog(config.tag, [ 'cons', 'ndelay', 'pid' ], config.facility);
 
   let layout = layouts.basicLayout;
   if (config.layout) {

@@ -1,10 +1,11 @@
 {
   "name": "posix-syslog-appender",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "log4js appender",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset": "rm -rf node_modules/ packege-lock.json && npm install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,6 @@
   },
   "homepage": "https://github.com/IsamuSugi/posix-syslog-appender#readme",
   "dependencies": {
-    "posix": "^4.1.2"
+    "posix.js": "^0.1.1"
   }
 }
